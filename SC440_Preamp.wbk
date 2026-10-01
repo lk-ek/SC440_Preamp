@@ -51,15 +51,6 @@
         },
         {
           "color": "rgb(152, 78, 163)",
-          "cursor1": {
-            "position": 0.0013265796530393113,
-            "x_format": "3~s",
-            "y_format": "3~V"
-          },
-          "cursorD": {
-            "x_format": "3~s",
-            "y_format": "3~V"
-          },
           "signal": "V(/VREF)",
           "trace_type": 257,
           "view": 0,
@@ -80,11 +71,29 @@
           "trace_type": 257,
           "view": 0,
           "yScaleView": 0
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "cursor1": {
+            "position": 0.010304761904761905,
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "cursorD": {
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "signal": "V(/PREAMP_OUT)-V(/IN_AC)+V(/VREF_RAW)",
+          "trace_type": 257,
+          "view": 0,
+          "yScaleView": 0
         }
       ],
       "viewCount": 1
     }
   ],
-  "user_defined_signals": [],
+  "user_defined_signals": [
+    "V(/PREAMP_OUT)-V(/IN_AC)+V(/VREF_RAW)"
+  ],
   "version": 8
 }
