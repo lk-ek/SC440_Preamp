@@ -2256,13 +2256,23 @@
 	)
 	(wire
 		(pts
-			(xy 135.08 211.27) (xy 143 211.27)
+			(xy 142.365 212.54) (xy 144.27 212.54)
 		)
 		(stroke
 			(width 0)
 			(type solid)
 		)
 		(uuid "52bdbb1e-c3af-4b59-857c-23a829baa914")
+	)
+	(wire
+		(pts
+			(xy 142.365 211.27) (xy 135.08 211.27)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "60c41ac3-7b35-481c-8a4a-d985f7463b04")
 	)
 	(wire
 		(pts
@@ -2283,6 +2293,16 @@
 			(type default)
 		)
 		(uuid "67ec0f10-418a-405f-8958-4f14bc64d3e3")
+	)
+	(wire
+		(pts
+			(xy 192.365 212.54) (xy 192.365 211.27)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "6e8ad562-7474-4db3-b032-93c084915ffc")
 	)
 	(wire
 		(pts
@@ -2386,6 +2406,16 @@
 	)
 	(wire
 		(pts
+			(xy 192.365 211.27) (xy 185.08 211.27)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "8c792374-e8ae-4a7b-b176-9cf9fe2b218c")
+	)
+	(wire
+		(pts
 			(xy 165.862 85.09) (xy 176.53 85.09)
 		)
 		(stroke
@@ -2413,6 +2443,16 @@
 			(type default)
 		)
 		(uuid "929ef679-6065-483c-b6f1-3a571687d1b8")
+	)
+	(wire
+		(pts
+			(xy 142.365 212.54) (xy 142.365 211.27)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "98810e97-c8dc-4040-8370-c9989472ae95")
 	)
 	(wire
 		(pts
@@ -2596,7 +2636,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.08 211.27) (xy 193 211.27)
+			(xy 192.365 212.54) (xy 194.27 212.54)
 		)
 		(stroke
 			(width 0)
@@ -2755,7 +2795,7 @@
 		(uuid "ff0e6d5c-8087-4146-9445-02550bc83e65")
 	)
 	(label "VREF"
-		(at 193 208.73 0)
+		(at 194.27 212.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2785,7 +2825,7 @@
 		(uuid "3da494aa-1c40-40cc-815f-568d8a46ee32")
 	)
 	(label "IN_AC"
-		(at 117 208.73 180)
+		(at 117 211.27 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2805,7 +2845,7 @@
 		(uuid "5f7bbbad-bdef-4bff-8ee8-6ea6198fdaa7")
 	)
 	(label "VREF"
-		(at 167 211.27 180)
+		(at 167 208.73 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2815,7 +2855,7 @@
 		(uuid "8cfc84ca-4c93-4742-8388-a45a5ce67ed7")
 	)
 	(label "PREAMP_OUT"
-		(at 143 208.73 0)
+		(at 144.27 212.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2855,7 +2895,7 @@
 		(uuid "b884150c-9319-4a26-ad62-999c78b93eed")
 	)
 	(label "VREF_RAW"
-		(at 167 208.73 180)
+		(at 167 211.27 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2875,7 +2915,7 @@
 		(uuid "cfa7bad9-0647-48c3-95f2-e81b0362e24c")
 	)
 	(label "FB"
-		(at 117 211.27 180)
+		(at 117 208.73 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3166,7 +3206,7 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=4 2=5 3=2 4=1 5=3"
+		(property "Sim.Pins" "1=OUT 2=VEE 3=IN+ 4=IN- 5=VCC"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -3568,7 +3608,7 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=4 2=5 3=2 4=1 5=3"
+		(property "Sim.Pins" "1=OUT 2=VEE 3=IN+ 4=IN- 5=VCC"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -4085,7 +4125,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 193 211.27 0)
+		(at 193 208.73 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4096,7 +4136,7 @@
 		(fields_autoplaced yes)
 		(uuid "726fc06c-d79f-4f2c-931c-58112344de72")
 		(property "Reference" "#PWR012"
-			(at 193 217.62 0)
+			(at 199.35 208.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4107,18 +4147,18 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 195.58 212.5399 0)
+			(at 196.85 208.7299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 193 211.27 0)
+			(at 193 208.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4129,7 +4169,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193 211.27 0)
+			(at 193 208.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4140,7 +4180,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 193 211.27 0)
+			(at 193 208.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4726,7 +4766,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 143 211.27 0)
+		(at 143 208.73 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4737,7 +4777,7 @@
 		(fields_autoplaced yes)
 		(uuid "83e62e96-443d-42d1-85f0-b60f747cf813")
 		(property "Reference" "#PWR011"
-			(at 143 217.62 0)
+			(at 149.35 208.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4748,18 +4788,18 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 146.05 212.5399 0)
+			(at 147.32 208.7299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 143 211.27 0)
+			(at 143 208.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4770,7 +4810,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 143 211.27 0)
+			(at 143 208.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4781,7 +4821,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 143 211.27 0)
+			(at 143 208.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4805,7 +4845,7 @@
 	)
 	(symbol
 		(lib_id "SC440_Preamp:VDC")
-		(at 75 210 0)
+		(at 75 210 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4823,7 +4863,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "5"
@@ -4834,11 +4874,11 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 75 211 0)
+			(at 75 209 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4849,7 +4889,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 75 213 0)
+			(at 75 207 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4869,8 +4909,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=- 2=+"
-			(at 0 0 0)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 150 420 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4881,7 +4921,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 0 0 0)
+			(at 150 420 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4892,7 +4932,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 0 0 0)
+			(at 150 420 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4903,7 +4943,7 @@
 			)
 		)
 		(property "Sim.Params" "dc=5"
-			(at 0 0 0)
+			(at 150 420 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6435,7 +6475,7 @@
 	)
 	(symbol
 		(lib_id "SC440_Preamp:VSIN")
-		(at 45 210 0)
+		(at 45 210 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6453,7 +6493,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "2.426V + 10mVpk@1k"
@@ -6464,11 +6504,11 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 45 211 0)
+			(at 45 209 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6479,7 +6519,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45 213 0)
+			(at 45 207 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6499,8 +6539,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=- 2=+"
-			(at 0 0 0)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 90 420 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6511,7 +6551,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 0 0 0)
+			(at 90 420 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6522,7 +6562,7 @@
 			)
 		)
 		(property "Sim.Type" "SIN"
-			(at 0 0 0)
+			(at 90 420 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6533,7 +6573,7 @@
 			)
 		)
 		(property "Sim.Params" "dc=2.426 ampl=10m f=1k ac=1"
-			(at 0 0 0)
+			(at 90 420 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

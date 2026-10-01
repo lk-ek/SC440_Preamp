@@ -47,7 +47,7 @@ def convert(text: str) -> str:
         raise RuntimeError("Input does not look like the expected OPA167x TINA-TI model")
 
     # PSpice/TINA subcircuit parameter marker -> ngspice-native parameter syntax.
-    text = re.sub(r"\bPARAMS:\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bPARAMS:[ \t]*", "", text, flags=re.IGNORECASE)
 
     # TINA/PSpice VSWITCH -> ngspice SW with equivalent midpoint and hysteresis.
     substitutions = {
