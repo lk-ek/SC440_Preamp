@@ -1,7 +1,15 @@
 # SC440 OPA1678 microphone preamp
 
 Small 5 V, single-supply OPA1678 daughterboard for the t.bone SC 440 USB
-microphone. The preamp AC-couples the microphone/JFET board, rebiases the audio
+microphone. The PCB is designed to fit on the back of the original analog PCB.
+To install it, remove the original pinheaders. Solder a new set of pinheaders
+on the opposite side of the original position to connect the daughter board.
+
+Remove the original pinsockets from the digital board, replace them with JST XH
+B4B sockets. Connect the daughter board with a short 4-pin cable with JST XH
+connectors, be mindful of the correct pinout.
+
+The preamp AC-couples the microphone/JFET board, rebiases the audio
 around a buffered half-supply reference, and drives the original USB/ADC board.
 
 Current nominal gain:
