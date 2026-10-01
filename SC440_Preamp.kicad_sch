@@ -1831,6 +1831,12 @@
 		(uuid "6f0ac7c2-fdc6-4cbc-8ce2-2151eaae6c4d")
 	)
 	(junction
+		(at 193.675 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06dcbe2e-7f29-4a40-a715-8046dc86a696")
+	)
+	(junction
 		(at 26.67 56.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1877,6 +1883,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3d2288ff-f8ac-47b0-8d74-053f1260b8d9")
+	)
+	(junction
+		(at 129.54 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "41d15dca-4042-4138-965e-9ee445ce53bc")
 	)
 	(junction
 		(at 147.32 138.43)
@@ -1993,6 +2005,16 @@
 			(type default)
 		)
 		(uuid "0e9bb297-d712-486d-83c2-964f6abb1a6e")
+	)
+	(wire
+		(pts
+			(xy 193.675 120.65) (xy 196.642 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f46789b-0600-4d90-9021-9df4768af893")
 	)
 	(wire
 		(pts
@@ -2156,7 +2178,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.754 120.65) (xy 196.642 120.65)
+			(xy 190.754 120.65) (xy 193.675 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2396,6 +2418,16 @@
 	)
 	(wire
 		(pts
+			(xy 94.615 110.49) (xy 147.842 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8abafe15-f6e7-440f-a324-270b66dab6b0")
+	)
+	(wire
+		(pts
 			(xy 161.585 183.065) (xy 170.775 183.065)
 		)
 		(stroke
@@ -2426,7 +2458,7 @@
 	)
 	(wire
 		(pts
-			(xy 79.375 110.49) (xy 147.842 110.49)
+			(xy 79.375 110.49) (xy 84.455 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2723,6 +2755,16 @@
 			(type default)
 		)
 		(uuid "e44469bd-83d9-4e3c-b369-952dd11f2784")
+	)
+	(wire
+		(pts
+			(xy 193.675 120.65) (xy 193.675 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e629461c-6c5f-4cf7-8925-6ffc8b3586f6")
 	)
 	(wire
 		(pts
@@ -3116,7 +3158,7 @@
 		(fields_autoplaced yes)
 		(uuid "0d89fe32-8df3-475f-9a82-cb8af087de04")
 		(property "Reference" "XREF1"
-			(at 156.505 193.675 0)
+			(at 156.505 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3126,7 +3168,7 @@
 			)
 		)
 		(property "Value" "OPA1678 (TI)"
-			(at 156.505 191.135 0)
+			(at 156.505 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3414,6 +3456,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 129.54 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2334ece5-c57d-4459-9542-d8b44b1516d2")
+		(property "Reference" "#PWR014"
+			(at 129.54 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 129.54 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 129.54 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e50321bd-13f2-41ec-ab12-068207d12816")
+		)
+		(instances
+			(project "SC440_Preamp"
+				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "SC440_Preamp:R")
 		(at 97.79 72.39 90)
 		(unit 1)
@@ -3425,7 +3545,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2378830b-a25f-47cb-97d2-a1787022fe57")
-		(property "Reference" "R2"
+		(property "Reference" "R5"
 			(at 100.33 71.1199 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3499,7 +3619,7 @@
 		(instances
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
-					(reference "R2")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -3519,7 +3639,7 @@
 		(fields_autoplaced yes)
 		(uuid "30281cbf-6df4-44ed-a480-2296a18d92d3")
 		(property "Reference" "XAMP1"
-			(at 106.505 193.675 0)
+			(at 106.505 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3529,7 +3649,7 @@
 			)
 		)
 		(property "Value" "OPA1678 (TI)"
-			(at 106.505 191.135 0)
+			(at 106.505 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3651,7 +3771,7 @@
 		(fields_autoplaced yes)
 		(uuid "356f7bac-3cf3-4440-9513-70310f5d6a05")
 		(property "Reference" "VTEST1"
-			(at 26.755 180.3399 0)
+			(at 26.67 180.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3662,7 +3782,7 @@
 			)
 		)
 		(property "Value" "2.426V + 10mVpk@1k"
-			(at 26.755 182.8799 0)
+			(at 26.67 182.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3860,11 +3980,11 @@
 		(at 140.462 130.81 270)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "515bb88a-d2a8-4d28-be6c-b6ccaaaaea5c")
 		(property "Reference" "R8"
@@ -3952,14 +4072,14 @@
 		(at 147.32 130.81 270)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54dd06cc-5307-4eca-8848-fdced9fe913a")
-		(property "Reference" "R10"
+		(property "Reference" "R8"
 			(at 149.86 129.5399 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4033,7 +4153,97 @@
 		(instances
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
-					(reference "R10")
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SC440_Preamp:R")
+		(at 89.535 110.49 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5b372433-1388-43b8-ae91-69aad4ddce06")
+		(property "Reference" "R4"
+			(at 89.535 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 89.535 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 88.535 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/YAGEO-MFR_DATASHEET"
+			(at 86.535 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 89.535 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 89.535 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d106df10-c371-48b9-a346-65fd37ccd944")
+		)
+		(pin "2"
+			(uuid "d92c33af-7f46-4463-ab7e-0a8d89302232")
+		)
+		(instances
+			(project "SC440_Preamp"
+				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -4051,7 +4261,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6481431f-703c-4e62-921a-797d9f14ffb3")
-		(property "Reference" "R6"
+		(property "Reference" "R9"
 			(at 142.24 116.8399 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4125,7 +4335,7 @@
 		(instances
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
-					(reference "R6")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -4155,7 +4365,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 24.215 192.8799 0)
+			(at 24.13 192.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4235,7 +4445,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 173.355 185.6051 90)
+			(at 172.72 185.6049 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4413,7 +4623,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7571d730-e8af-452d-ae1c-5fac5eeab993")
-		(property "Reference" "C5"
+		(property "Reference" "C6"
 			(at 50.8 71.7459 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4487,7 +4697,7 @@
 		(instances
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
-					(reference "C5")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -4579,7 +4789,7 @@
 		(body_style 1)
 		(exclude_from_sim yes)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp yes)
 		(fields_autoplaced yes)
@@ -4798,7 +5008,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 123.825 185.6051 90)
+			(at 123.19 185.6049 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4855,6 +5065,98 @@
 	)
 	(symbol
 		(lib_id "SC440_Preamp:C")
+		(at 193.675 125.73 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9136cd70-e223-4af0-96b8-8b2e0d7c0336")
+		(property "Reference" "C7"
+			(at 196.85 124.4599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1n"
+			(at 196.85 126.9999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 193.675 124.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.675 122.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 193.675 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 193.675 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "210f90a0-b6db-484d-a807-7316802f9177")
+		)
+		(pin "2"
+			(uuid "01aed172-91c6-4274-b363-8bf9dcab3bd8")
+		)
+		(instances
+			(project "SC440_Preamp"
+				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SC440_Preamp:C")
 		(at 60.96 73.66 270)
 		(unit 1)
 		(body_style 1)
@@ -4865,7 +5167,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a6e33b78-f892-4f00-9e6c-7671c6168f5f")
-		(property "Reference" "C6"
+		(property "Reference" "C8"
 			(at 64.77 72.3899 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4939,7 +5241,7 @@
 		(instances
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
-					(reference "C6")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -5310,7 +5612,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 54.7 173.9899 0)
+			(at 54.61 173.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5360,6 +5662,98 @@
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SC440_Preamp:C")
+		(at 129.54 114.3 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b30cb0d6-85cd-48db-817f-467f0840ce4e")
+		(property "Reference" "C5"
+			(at 125.73 113.0299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "330p"
+			(at 125.73 115.5699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 129.54 113.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 111.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 129.54 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aad0f6a6-bc83-448d-bc0b-949a8a549a38")
+		)
+		(pin "2"
+			(uuid "da8d893b-49ec-4b13-93f4-817328725f61")
+		)
+		(instances
+			(project "SC440_Preamp"
+				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -5571,7 +5965,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 54.54 192.8799 0)
+			(at 54.61 192.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5638,7 +6032,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "cd9e6d52-cb03-4391-b75d-e5bff325f1ad")
-		(property "Reference" "R4"
+		(property "Reference" "R2"
 			(at 81.28 104.1399 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5712,7 +6106,7 @@
 		(instances
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
-					(reference "R4")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -5792,6 +6186,84 @@
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 193.675 129.54 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "daf2a824-4f88-423c-91b0-b24a5b86c5a8")
+		(property "Reference" "#PWR015"
+			(at 193.675 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 193.675 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 193.675 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.675 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 193.675 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "193c45c9-0bf5-450d-aae3-766e0ae6aef8")
+		)
+		(instances
+			(project "SC440_Preamp"
+				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -6175,7 +6647,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2d3caa2-da00-4786-bf10-e9466a0ef7b1")
-		(property "Reference" "R5"
+		(property "Reference" "R6"
 			(at 179.07 90.1699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6249,7 +6721,7 @@
 		(instances
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
-					(reference "R5")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -6359,7 +6831,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f23b2dd1-73cf-413c-aead-dafa78c1bc27")
-		(property "Reference" "R11"
+		(property "Reference" "R10"
 			(at 185.674 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6431,7 +6903,7 @@
 		(instances
 			(project "SC440_Preamp"
 				(path "/1c370965-b730-4424-8adc-90fd25dcf95f"
-					(reference "R11")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -6450,7 +6922,7 @@
 		(fields_autoplaced yes)
 		(uuid "f5491c50-9a20-401b-bdc5-1b560d90e1fd")
 		(property "Reference" "VCCSIM1"
-			(at 55.81 180.3399 0)
+			(at 55.88 180.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6461,7 +6933,7 @@
 			)
 		)
 		(property "Value" "5"
-			(at 55.81 182.8799 0)
+			(at 55.88 182.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

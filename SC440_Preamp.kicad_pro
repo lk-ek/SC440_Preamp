@@ -868,7 +868,7 @@
         "uuid": "1c370965-b730-4424-8adc-90fd25dcf95f"
       }
     ],
-    "used_designators": "#PWR1-13,#PWR17,C1-6,EAMP1,EVREF1,J1-2,R1-11,VCCSIM1,VTEST1",
+    "used_designators": "#PWR1-15,#PWR17,C1-8,EAMP1,EVREF1,J1-2,R1-12,VCCSIM1,VTEST1",
     "variants": []
   },
   "sheets": [
