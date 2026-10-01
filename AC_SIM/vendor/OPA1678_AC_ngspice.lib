@@ -1,0 +1,26 @@
+* SPDX-License-Identifier: GPL-3.0-only
+* Copyright (c) 2026 SC440 Preamp contributors
+* OPA1678 AC-analysis model for ngspice/KiCad
+* Purpose: stable small-signal AC analysis of the SC440 preamp.
+* It is NOT a vendor macro-model and is not intended for clipping/noise/transient validation.
+* Parameters based on OPA1678 typical datasheet figures used in this project:
+*   Aol = 114 dB = 501187 V/V
+*   GBW = 16 MHz
+* Dominant pole ~= GBW/Aol = 31.924 Hz
+* With RDOM=501187 ohm and CDOM=9.94718 nF, fp ~=31.924 Hz.
+* Pin order: IN+ IN- VCC VEE OUT
+
+.SUBCKT OPA1678_AC INP INM VCC VEE OUT
+* Input resistance.
+RIN INP INM 10T
+* Dominant-pole open-loop stage. Current is injected into NDOM for INP>INM.
+GOL 0 NDOM INP INM 1
+RDOM NDOM 0 501187.2336
+CDOM NDOM 0 9.94718394n
+* Low-impedance output buffer; 10 ohm open-loop output resistance.
+EOUT NBUF 0 NDOM 0 1
+ROUT NBUF OUT 10
+* Tiny supply-reference paths prevent floating supply pins without loading them.
+RVCC VCC 0 1T
+RVEE VEE 0 1T
+.ENDS OPA1678_AC

@@ -1,0 +1,111 @@
+{
+  "custom_cursors": 2,
+  "last_sch_text_sim_command": ".tran 10u 20m 0 10u",
+  "tabs": [
+    {
+      "analysis": "TRAN",
+      "commands": [
+        ".tran 10u 20m 0 10u",
+        ".kicad adjustpaths",
+        ".save all",
+        ".kicad esavenone"
+      ],
+      "dottedSecondary": false,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "smithMode": false,
+      "traces": [
+        {
+          "color": "rgb(255, 255, 51)",
+          "signal": "V(/ANALOG_INPUT)",
+          "trace_type": 257,
+          "view": 0,
+          "yScaleView": 0
+        },
+        {
+          "color": "rgb(166, 86, 40)",
+          "signal": "V(/FB)",
+          "trace_type": 257,
+          "view": 0,
+          "yScaleView": 0
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(/IN_AC)",
+          "trace_type": 257,
+          "view": 0,
+          "yScaleView": 0
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(/PREAMP_OUT)",
+          "trace_type": 257,
+          "view": 0,
+          "yScaleView": 0
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "cursor1": {
+            "position": 0.0013265796530393113,
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "cursorD": {
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "signal": "V(/VREF)",
+          "trace_type": 257,
+          "view": 0,
+          "yScaleView": 0
+        },
+        {
+          "color": "rgb(255, 127, 0)",
+          "cursor2": {
+            "position": 0.0013264540879501488,
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "cursorD": {
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "signal": "V(/VREF_RAW)",
+          "trace_type": 257,
+          "view": 0,
+          "yScaleView": 0
+        }
+      ],
+      "viewCount": 1
+    },
+    {
+      "analysis": "AC",
+      "commands": [
+        ".ac dec 100 100m 10Meg",
+        ".kicad adjustpaths",
+        ".save all",
+        ".kicad esavenone"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "smithMode": false,
+      "traces": [],
+      "viewCount": 1
+    }
+  ],
+  "user_defined_signals": [],
+  "version": 8
+}
