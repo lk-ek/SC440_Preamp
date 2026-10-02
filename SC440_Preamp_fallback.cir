@@ -1,25 +1,28 @@
-* SC440 OPA1678 daughterboard - transient fallback netlist
-* Hardware gain: 1 + 22k/10k = 3.2 (+10.10 dB)
+SC440 current hardware - transient fallback (10 dB / MLCC)
 .include vendor/OPA167x_ngspice.LIB
-VCC vcc 0 DC 5
-R6 vcc vcc_a 22
-C4 vcc_a 0 10u
-C5 vcc_a 0 100n
-R1 vcc_a vref_raw 10k
-R2 vref_raw 0 10k
-C2 vref_raw 0 47u
-C3 vref_raw 0 100n
-* OPA167x pin order: IN+ IN- VCC VEE OUT
-XREF vref_raw vref vcc_a 0 vref OPA167x
-* Measured SC440 source-follower output: 2.426 V DC + 10 mVpk @ 1 kHz
-VIN analog_input 0 DC 2.426 AC 1 SIN(2.426 10m 1k)
-* Default input coupling: C6 1 uF MLCC. C1 film option is DNP.
-C6 analog_input in_ac 1u
-R3 in_ac vref 100k
-XAMP in_ac fb vcc_a 0 preamp_out OPA167x
-R5 preamp_out fb 22k
-R4 fb vref 10k
-R7 preamp_out analog_output 100
-RLOAD analog_output 0 1Meg
+VCC +5V 0 DC 5
+R3 +5V VCC_A 22
+C6 VCC_A 0 10u
+C8 VCC_A 0 100n
+R5 VCC_A VREF_RAW 10k
+R7 VREF_RAW 0 10k
+C3 VREF_RAW 0 47u
+C4 VREF_RAW 0 100n
+XREF VREF_RAW VREF VCC_A 0 VREF OPA167x
+VIN ANALOG_INPUT 0 DC 2.426 AC 1 SIN(2.426 10m 1k)
+* Default MLCC coupling. Film alternative:
+* remove C2 and use C1 ANALOG_INPUT COUPLED 2.2u (R1/R2 are ideal 0-ohm links).
+C2 ANALOG_INPUT COUPLED 1u
+R4 COUPLED IN_AC 1k
+R6 IN_AC VREF 100k
+C5 IN_AC 0 330p
+XAMP IN_AC FB VCC_A 0 PREAMP_OUT OPA167x
+* Select R8: 1k = 6.02 dB; 1.5k = 7.96 dB; 2.2k = 10.10 dB.
+R8 PREAMP_OUT FB 2.2k
+R9 FB VREF 1k
+C9 PREAMP_OUT FB 330p
+R10 PREAMP_OUT ANALOG_OUTPUT 100
+C7 ANALOG_OUTPUT 0 1n
+* No ADC or cable load is modeled. Feedback is before R10.
 .tran 10u 20m 0 10u
 .end
