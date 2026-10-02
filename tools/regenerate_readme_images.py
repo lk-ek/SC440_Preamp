@@ -11,9 +11,11 @@ KiCad 10.99 nightly), Inkscape >= 1.0, and Pillow:
 Optional overrides:
     --project-dir PATH --kicad-cli PATH --inkscape PATH --models-dir PATH
 
-Source files are never modified. Zone refill and removal of DNP 3D models
+KiCad source files are never modified. Zone refill and removal of DNP 3D models
 happen only in a temporary copy. PNGs are staged and validated before any
-README image is replaced. The script uses saved files, not unsaved GUI edits.
+README image is replaced. An old combined PCB image reference in README.md is
+automatically replaced by front/back image references after a successful run.
+The script uses saved files, not unsaved GUI edits.
 
 SPDX-License-Identifier: GPL-3.0-only
 """
@@ -30,10 +32,13 @@ import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
 
-LAYERS = "F.Cu,B.Cu,F.SilkS,B.SilkS,F.Fab,B.Fab,F.CrtYd,B.CrtYd,Edge.Cuts,Dwgs.User"
+FRONT_LAYERS = "F.Cu,F.SilkS,Edge.Cuts"
+BACK_LAYERS = "B.Cu,B.SilkS,Edge.Cuts"
+IMAGE_LINK = re.compile(r'!\[[^\]]*\]\(<?([^\s)>]+)>?(?:\s+"[^"]*")?\)')
 TARGETS = {
     "schematic": "sc440_preamp-schematic.png",
-    "pcb": "sc440_preamp_pcb.png",
+    "pcb_front": "sc440_preamp_pcb_front.png",
+    "pcb_back": "sc440_preamp_pcb_back.png",
     "front": "sc440_preamp_front.png",
     "back": "sc440_preamp_back.png",
 }
@@ -118,9 +123,20 @@ def project_root(explicit):
     raise RuntimeError("Project not found; place script in tools/ or use --project-dir PATH")
 
 
+def split_pcb_reference(readme):
+    def replace(match):
+        old = Path(match[1])
+        if old.name != "sc440_preamp_pcb.png":
+            return match[0]
+        front = (old.parent / TARGETS["pcb_front"]).as_posix()
+        back = (old.parent / TARGETS["pcb_back"]).as_posix()
+        return f"![PCB layout — front]({front})\n![PCB layout — back]({back})"
+    return IMAGE_LINK.sub(replace, readme)
+
+
 def image_targets(root):
-    readme = (root / "README.md").read_text(encoding="utf-8")
-    refs = re.findall(r'!\[[^\]]*\]\(<?([^\s)>]+)>?(?:\s+"[^"]*")?\)', readme)
+    readme = split_pcb_reference((root / "README.md").read_text(encoding="utf-8"))
+    refs = IMAGE_LINK.findall(readme)
     outputs = {}
     for kind, filename in TARGETS.items():
         matches = [ref for ref in refs if Path(ref).name == filename]
@@ -286,7 +302,8 @@ def main():
     parser.add_argument("--allow-missing-models", action="store_true")
     parser.add_argument("--width", type=int, default=2400, help="SVG width / square 3D canvas (default: 2400)")
     parser.add_argument("--padding", type=int, default=40)
-    parser.add_argument("--pcb-layers", default=LAYERS)
+    parser.add_argument("--pcb-front-layers", default=FRONT_LAYERS)
+    parser.add_argument("--pcb-back-layers", default=BACK_LAYERS)
     args = parser.parse_args()
     if args.width < 200 or args.padding < 0:
         parser.error("width must be >= 200 and padding >= 0")
@@ -338,16 +355,28 @@ def main():
         if len(svgs) != 1:
             raise RuntimeError("Expected one SVG for schematic root page")
         rasterize(inkscape, svgs[0], staged["schematic"], args.width, root, env, "white", args.padding)
-        pcb_svg = work / "pcb.svg"
-        run([cli, "pcb", "export", "svg", "--mode-single", "--exclude-drawing-sheet",
-             "--page-size-mode", "0", "--layers", args.pcb_layers, "--output", pcb_svg, board], root, env)
-        rasterize(inkscape, pcb_svg, staged["pcb"], args.width, root, env, "#071629", args.padding)
+        for kind, layers, mirror in [("pcb_front", args.pcb_front_layers, False),
+                                     ("pcb_back", args.pcb_back_layers, True)]:
+            pcb_svg = work / f"{kind}.svg"
+            command = [cli, "pcb", "export", "svg", "--mode-single", "--exclude-drawing-sheet",
+                       "--page-size-mode", "0", "--layers", layers, "--output", pcb_svg]
+            if mirror:
+                command.append("--mirror")
+            run([*command, board], root, env)
+            rasterize(inkscape, pcb_svg, staged[kind], args.width, root, env, "#071629", args.padding)
         for kind, side in [("front", "top"), ("back", "bottom")]:
             # front/back in the render CLI mean edge views, not component sides!
             run([cli, "pcb", "render", "--side", side, "--quality", "high",
                  "--background", "transparent", "--width", args.width, "--height", args.width,
                  "--output", staged[kind], board], root, env)
             finish_png(staged[kind], "#eceef2", args.padding)
+        readme_path = root / "README.md"
+        readme = readme_path.read_text(encoding="utf-8")
+        new_readme = split_pcb_reference(readme)
+        if new_readme != readme:
+            staged["readme"] = work / "README.md"
+            staged["readme"].write_text(new_readme, encoding="utf-8")
+            targets["readme"] = readme_path
         publish(staged, targets)
     print("Updated:")
     for path in targets.values():

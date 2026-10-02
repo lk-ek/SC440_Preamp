@@ -30,7 +30,8 @@ Current nominal gain:
 See `FOOTPRINT_CHECK.md` for the pin/footprint cross-check used for this revision.
 
 ![image](img/sc440_preamp-schematic.png)
-![image](img/sc440_preamp_pcb.png)
+![PCB layout — front](img/sc440_preamp_pcb_front.png)
+![PCB layout — back](img/sc440_preamp_pcb_back.png)
 ![image](img/sc440_preamp_front.png)
 ![image](img/sc440_preamp_back.png)
 
