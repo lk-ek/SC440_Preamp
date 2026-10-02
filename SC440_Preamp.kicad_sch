@@ -3088,7 +3088,7 @@
 		(uuid "3ff40c28-2223-4362-b249-d170c880bd9c")
 	)
 	(label "PREAMP_OUT"
-		(at 155.575 52.705 270)
+		(at 222.5675 96.8375 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3098,7 +3098,7 @@
 		(uuid "42e9c71a-79ca-4bb8-8fd7-349e71977ce0")
 	)
 	(label "VREF"
-		(at 142.875 52.705 270)
+		(at 222.5675 84.1375 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3108,7 +3108,7 @@
 		(uuid "4f8637e1-9503-4a6e-b276-b2063492131c")
 	)
 	(label "VCC_A"
-		(at 116.84 52.705 270)
+		(at 222.5675 58.1025 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3158,7 +3158,7 @@
 		(uuid "9a99baae-831c-4960-a839-619d1be4ae13")
 	)
 	(label "VREF_RAW"
-		(at 130.175 52.705 270)
+		(at 222.5675 71.4375 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3570,7 +3570,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 142.875 52.705 0)
+		(at 222.5675 84.1375 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3581,27 +3581,29 @@
 		(fields_autoplaced yes)
 		(uuid "11493aee-5e69-4ac6-9a66-264882e41aaa")
 		(property "Reference" "TP3"
-			(at 142.875 43.18 0)
+			(at 227.33 82.8674 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 142.875 45.72 0)
+			(at 227.33 85.4074 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 147.955 52.705 0)
+			(at 222.5675 89.2175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3612,7 +3614,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.955 52.705 0)
+			(at 222.5675 89.2175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3623,7 +3625,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 142.875 52.705 0)
+			(at 222.5675 84.1375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3647,7 +3649,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 130.175 52.705 0)
+		(at 222.5675 71.4375 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3658,27 +3660,29 @@
 		(fields_autoplaced yes)
 		(uuid "1b163037-1813-486f-904e-3aff44825744")
 		(property "Reference" "TP2"
-			(at 130.175 43.18 0)
+			(at 227.33 70.1674 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 130.175 45.72 0)
+			(at 227.33 72.7074 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 135.255 52.705 0)
+			(at 222.5675 76.5175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3689,7 +3693,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.255 52.705 0)
+			(at 222.5675 76.5175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3700,7 +3704,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 130.175 52.705 0)
+			(at 222.5675 71.4375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5655,7 +5659,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 168.275 52.705 0)
+		(at 222.5675 109.5375 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5666,7 +5670,7 @@
 		(fields_autoplaced yes)
 		(uuid "9a513b79-d9ef-40b7-9e31-0e4a23e2fb36")
 		(property "Reference" "#PWR016"
-			(at 168.275 59.055 0)
+			(at 216.2175 109.5375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5677,7 +5681,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 168.275 57.15 0)
+			(at 221.2975 105.41 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5687,7 +5691,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 168.275 52.705 0)
+			(at 222.5675 109.5375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5698,7 +5702,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.275 52.705 0)
+			(at 222.5675 109.5375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5709,7 +5713,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 168.275 52.705 0)
+			(at 222.5675 109.5375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5825,7 +5829,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 155.575 52.705 0)
+		(at 222.5675 96.8375 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5836,27 +5840,29 @@
 		(fields_autoplaced yes)
 		(uuid "9ad08b68-fdfc-40ab-bab5-8af1b309aca6")
 		(property "Reference" "TP4"
-			(at 155.575 43.18 0)
+			(at 227.33 95.5674 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 155.575 45.72 0)
+			(at 227.33 98.1074 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 160.655 52.705 0)
+			(at 222.5675 101.9175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5867,7 +5873,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.655 52.705 0)
+			(at 222.5675 101.9175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5878,7 +5884,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 155.575 52.705 0)
+			(at 222.5675 96.8375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6767,7 +6773,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 168.275 52.705 0)
+		(at 222.5675 109.5375 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6778,27 +6784,29 @@
 		(fields_autoplaced yes)
 		(uuid "cbb6e154-8bd6-4e19-8d9b-663f98dcf748")
 		(property "Reference" "TP5"
-			(at 168.275 43.18 0)
+			(at 227.33 108.2674 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 168.275 45.72 0)
+			(at 227.33 110.8074 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 173.355 52.705 0)
+			(at 222.5675 114.6175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6809,7 +6817,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.355 52.705 0)
+			(at 222.5675 114.6175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6820,7 +6828,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 168.275 52.705 0)
+			(at 222.5675 109.5375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7858,7 +7866,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 116.84 52.705 0)
+		(at 222.5675 58.1025 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7869,27 +7877,29 @@
 		(fields_autoplaced yes)
 		(uuid "fe2d18d2-e4f3-46a5-b44e-2badbe97f69c")
 		(property "Reference" "TP1"
-			(at 116.84 43.18 0)
+			(at 227.33 56.8324 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 116.84 45.72 0)
+			(at 227.33 59.3724 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 121.92 52.705 0)
+			(at 222.5675 63.1825 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7900,7 +7910,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 52.705 0)
+			(at 222.5675 63.1825 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7911,7 +7921,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 116.84 52.705 0)
+			(at 222.5675 58.1025 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
