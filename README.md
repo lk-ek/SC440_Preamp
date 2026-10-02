@@ -1,5 +1,17 @@
 # SC440 OPA1678 microphone preamp
 
+## don't try this at home
+
+Caveat: measurements show that the theoretical use for this preamp is a
+reduction of the noise floor by a whopping 0.2dB. The noise seems to come from
+either the capsule or the analog board.
+
+So this is a nice flex mod as an exercise in analogue circuitry, but don't
+expect any quality gains from it at all.
+
+## Intro
+
+
 A 5 V analog gain board for the **t.bone SC 440 USB microphone**. It sits between
 its original microphone/JFET board and USB/ADC board, AC-couples the signal,
 rebiases it around a buffered half-supply reference, and adds selectable gain.

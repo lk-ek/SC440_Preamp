@@ -922,7 +922,7 @@
         "uuid": "1c370965-b730-4424-8adc-90fd25dcf95f"
       }
     ],
-    "used_designators": "#FLG1-3,#PWR1-17,C1-9,EAMP1,EVREF1,J1-2,R1-12,TP1-5,VCCSIM1,VTEST1",
+    "used_designators": "#FLG1-3,#PWR1-17,C1-9,EAMP1,EVREF1,J1-2,R1-12,SYM1,TP1-5,VCCSIM1,VTEST1",
     "variants": []
   },
   "sheets": [
